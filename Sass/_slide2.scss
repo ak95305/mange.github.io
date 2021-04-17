@@ -1,0 +1,94 @@
+@import "./variables";
+@import "./mixins";
+
+.number {
+  background-color: $brightRed;
+  border-radius: 50px;
+  padding: 0.8rem 1.5rem;
+  color: $white;
+}
+
+.slide2 {
+  margin-top: 6.25rem;
+
+  //Points Heading
+  .slide2-intro {
+    text-align: center;
+
+    & > * {
+      margin: 20px 0px;
+    }
+
+    padding: 0px 15px;
+    h2 {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      color: $darkBlue;
+    }
+    p {
+      text-align: center;
+      line-height: 1.8rem;
+      color: $darkGrayishBlue;
+    }
+  }
+
+  //Points MOBILE
+  @include breakpoint-down(small) {
+    .slide2-points {
+      margin-top: 2.25rem;
+      padding-left: 15px;
+      .point {
+        margin-top: 1.5rem;
+        color: $darkGrayishBlue;
+        line-height: 1.8rem;
+        h4 {
+          background-color: #f25f3a47;
+          padding: 0.7rem 0;
+          border-bottom-left-radius: 50px;
+          border-top-left-radius: 50px;
+          color: $darkBlue;
+        }
+        p {
+          padding: 1rem 0rem;
+        }
+      }
+    }
+  }
+
+  //FOR PC VIEW
+  @include breakpoint-up(medium) {
+    background-image: url("./../images/bg-tablet-pattern.svg");
+    display: flex;
+    padding: 0px 5rem;
+    margin-top: 0;
+    background-repeat: no-repeat;
+    background-size: 700px;
+    background-position: -401px 292px;
+    height: 48rem;
+    .slide2-intro {
+      h2,
+      p {
+        text-align: left;
+        padding-right: 1rem;
+      }
+    }
+    .slide2-points {
+      .point {
+        padding: 15px 0px;
+        h4 {
+          color: $darkBlue;
+
+          span {
+            margin-right: 30px;
+          }
+        }
+        p {
+          padding-left: 100px;
+          padding-top: 10px;
+          color: $darkGrayishBlue;
+        }
+      }
+    }
+  }
+}

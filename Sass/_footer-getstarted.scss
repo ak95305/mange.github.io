@@ -1,0 +1,128 @@
+@import "./variables";
+
+.get-started {
+  background-image: url("./../images/bg-simplify-section-desktop.svg");
+  background-position: 99px -45px;
+  background-size: 118%;
+  background-repeat: no-repeat;
+  height: 13.125rem;
+  background-color: $brightRed;
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 5rem;
+  margin-top: 10.75rem;
+
+  a {
+    background-color: $white;
+    color: $brightRed;
+    box-shadow: none;
+  }
+
+  @include breakpoint-down(small) {
+    background-image: url("./../images/bg-simplify-section-mobile.svg");
+    background-position: 10px 58px;
+    background-size: 25%;
+    display: block;
+    margin-top: 5rem;
+    display: block;
+    padding: 5.5rem 3rem;
+    text-align: center;
+    height: 25.313rem;
+    h1 {
+      font-size: 36px;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 2rem;
+    }
+  }
+}
+
+footer {
+  background-color: $veryDarkBlue;
+  color: $white;
+  height: 14.875rem;
+  padding: 3.75rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  .logo-social-handles {
+    .logo {
+      margin-bottom: 4.688rem;
+    }
+    .social-handles {
+      img {
+        &:not(:last-child) {
+          margin-right: 0.75rem;
+        }
+      }
+    }
+  }
+
+  .footer-nav-links {
+    .nav1,
+    .nav2 {
+      ul {
+        list-style: none;
+        li {
+          &:not(:last-child) {
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  .email {
+    form {
+      display: flex;
+      justify-content: center;
+      input{
+        padding: 0.8rem 1.5rem;
+        border-radius: 50px;
+        border: none;
+      }
+
+      a {
+        box-shadow: none;
+        padding: 0.8rem 1.5rem;
+        display: inline-block;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+
+  //MOBILE VIEW
+  @include breakpoint-down(small){
+    display: flex;
+    flex-direction: column-reverse;
+    height: fit-content;
+    text-align: center;
+    padding: 0rem 2rem;
+
+    &>*{
+      margin: 1.625rem 0rem;
+    }
+
+    .logo-social-handles{
+      display: flex;
+      flex-direction: column-reverse;
+      .logo{
+        img{
+          margin-top: 3.25rem;
+        }
+      }
+    }
+
+    .email{
+      text-align: center;
+      form{
+        input{
+          width: 15rem;
+        }
+      }
+    }
+  }
+}

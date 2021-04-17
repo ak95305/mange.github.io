@@ -1,0 +1,67 @@
+@import "./variables";
+
+.review-slide {
+  text-align: center;
+  a {
+    display: inline-block;
+    margin-top: 2.625rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.25rem;
+  }
+
+  .review-container {
+    overflow-x: hidden;
+  }
+
+  .review-box {
+    margin-top: 3.75rem;
+    display: inline-flex;
+    .review-card {
+      width: 31.938rem;
+      height: 13rem;
+      background-color: $varyLightGray;
+      margin: 1rem;
+
+      .avatar {
+        height: 2.125rem;
+        img {
+          width: 4.25rem;
+          height: 4.25rem;
+          display: block;
+          margin: auto;
+          position: relative;
+          top: -2.125rem;
+        }
+      }
+      .reviewer-name {
+        text-align: center;
+        padding: 1rem 0rem;
+        font-weight: 700;
+        color: $darkBlue;
+      }
+      .review-text {
+        text-align: center;
+        color: $darkGrayishBlue;
+      }
+    }
+  }
+
+  @include breakpoint-down(small) {
+    margin-top: 4.875rem;
+    .review-container {
+      .review-box {
+        .review-card {
+          width: 21rem;
+          height: 15.375rem;
+        }
+      }
+    }
+  }
+
+  @include breakpoint-up(medium) {
+    margin-top: -10rem;
+  }
+}

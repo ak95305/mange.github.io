@@ -1,0 +1,66 @@
+.intro-slide {
+
+
+  //PC BREAKPOINT
+  @include breakpoint-up(medium){
+    display: flex;
+    height: 45rem;
+  }
+
+
+  .intro-image {
+    background-image: url(./../images/bg-tablet-pattern.svg);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 100px -100px;
+    top: 0;
+    img {
+      width: 100%;
+      margin-top: 6.875rem;
+    }
+
+    //IMAGE RESPONSIVE FOR PC
+    @include breakpoint-up(medium){
+      order: 2;
+      img{
+        width: 80%;
+      }
+    }
+  }
+
+  .intro-text {
+    text-align: center;
+
+    & > * {
+      margin: 20px 0px;
+    }
+
+    padding: 0px 15px;
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      color: $darkBlue;
+    }
+    p {
+      text-align: center;
+      line-height: 1.8rem;
+      color: $darkGrayishBlue;
+    }
+    a{
+      display: inline-block;
+    }
+
+    //TEXT FOR PC
+    @include breakpoint-up(medium){
+      order: 1;
+      padding: 0px 5rem;
+      & > *{
+        text-align: left !important;
+      }
+    }
+  }
+}
