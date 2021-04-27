@@ -12,11 +12,15 @@ html{
 }
 
 .body-blur{
-    background-image: linear-gradient(to bottom, transparent, $veryDarkBlue);
+    background-image: linear-gradient(to bottom, transparent 0%, $veryDarkBlue 30%);
     background-repeat: no-repeat;
     transition: 200ms;
     background-size: 100%;
     overflow: hidden;
+
+    .intro-slide{
+        visibility: hidden;
+    }
 }
 
 a{

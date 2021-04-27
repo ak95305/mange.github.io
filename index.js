@@ -2,7 +2,6 @@ let hamburger = document.querySelector(".hamburger");
 let mobileNavBar = document.querySelector(".nav-bar-mobile");
 let body = document.querySelector("body");
 
-console.log(mobileNavBar);
 
 hamburger.addEventListener("click", hamburgerFunction);
 
@@ -13,6 +12,7 @@ function hamburgerFunction(){
         mobileNavBar.classList.remove("nav-bar-animation-in");
         mobileNavBar.classList.add("nav-bar-animation-out");
         body.classList.remove("body-blur");
+        console.log(body);
 
     }
     else{
@@ -20,6 +20,7 @@ function hamburgerFunction(){
         mobileNavBar.classList.add("nav-bar-animation-in");
         mobileNavBar.classList.remove("nav-bar-animation-out");
         body.classList.add("body-blur");
+        
     }
 
     

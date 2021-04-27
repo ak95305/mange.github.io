@@ -11,13 +11,17 @@ html {
 }
 
 .body-blur {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#1d1e25));
-  background-image: linear-gradient(to bottom, transparent, #1d1e25);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(30%, #1d1e25));
+  background-image: linear-gradient(to bottom, transparent 0%, #1d1e25 30%);
   background-repeat: no-repeat;
   -webkit-transition: 200ms;
   transition: 200ms;
   background-size: 100%;
   overflow: hidden;
+}
+
+.body-blur .intro-slide {
+  visibility: hidden;
 }
 
 a {
